@@ -1,0 +1,78 @@
+/* =================== Body =================== */
+body {
+    margin: 0;
+    background: #2c2c2c; /* darker gray for more contrast */
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* =================== Vertical Buttons =================== */
+#verticalButtons {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 10;
+}
+
+#verticalButtons button {
+    border: none;
+    border-radius: 12px;
+    padding: 10px 16px;
+    font-size: 18px;
+    cursor: pointer;
+    background: linear-gradient(135deg, #444, #222);
+    color: #fff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    transition: all 0.3s ease;
+    backdrop-filter: blur(4px); /* adds slight frosted effect */
+}
+
+#verticalButtons button:hover {
+    background: linear-gradient(135deg, #666, #333);
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+}
+
+/* =================== Canvases =================== */
+#carCanvas {
+    background: #b0b0b0;
+    display: block;
+    margin: 0 10px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+    border: 2px solid #888;
+    transition: all 0.2s ease;
+}
+
+#carCanvas:hover {
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.7);
+}
+
+#networkCanvas {
+    background: transparent;
+    display: block;
+    margin: 0 10px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+    border: 1px solid rgba(255,255,255,0.08);
+    transition: all 0.2s ease;
+}
+
+/* =================== Extra fun effect =================== */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at center, rgba(255,255,255,0.02) 0%, transparent 100%);
+    pointer-events: none;
+    z-index: 0;
+}
